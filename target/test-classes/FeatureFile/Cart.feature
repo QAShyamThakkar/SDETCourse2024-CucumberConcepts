@@ -1,5 +1,6 @@
 Feature: Validate CartFeature Functionality
 
+  @Regression
   Scenario: Verify user can use cart
     Given user open website
     And verify user is on the login page

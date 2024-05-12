@@ -1,0 +1,67 @@
+1. Soft skill class
+
+2. Cucumber - Setup
+	Project - Maven
+	Dependencies (IO Cucumber, cucumber-junit)
+	Plugin  - Cucumber, Gherkin
+
+3. feature File
+	Writing scenarios
+
+4. Step definition
+
+5. Hooks - @Before @After
+
+6. Runner class
+    @RunWith
+    @CucumberOptions
+
+    feature - path to feature file
+    glue - package name
+    tags -
+    plugin - report plugin
+    dryRun -
+
+7. Assert
+
+8. Parameters
+
+9. Scenario Outline
+
+10. Data Tables
+
+===========================Extra Plugin Used in Class===========================
+<build>
+<plugins>
+	<plugin>
+	<groupId>net.masterthought</groupId>
+	<artifactId>maven-cucumber-reporting</artifactId>
+	<version>3.4.0</version>
+	<executions>
+		<execution>
+		<id>execution</id>
+		<phase>test</phase>
+		<goals>
+			<goal>generate</goal>
+		</goals>
+		<configuration>
+			<projectName>Automation</projectName>
+			<outputDirectory>Report</outputDirectory>
+		</configuration>
+		</execution>
+	</executions>
+	</plugin>
+
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-surefire-plugin</artifactId>
+	<version>2.22.0</version>
+	<configuration>
+		<parallel>methods</parallel>
+		<threadCount>2</threadCount>
+	</configuration>
+</plugin>
+
+</plugins>
+</build>
+==============================================================================
